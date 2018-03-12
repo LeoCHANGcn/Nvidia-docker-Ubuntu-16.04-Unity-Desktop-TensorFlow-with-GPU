@@ -1,4 +1,4 @@
-#Nvidia-docker-Ubuntu 16.04-Unity-Desktop-TensorFlow with GPU
+# Nvidia-docker-Ubuntu 16.04-Unity-Desktop-TensorFlow with GPU
 
 Dockerfile for Ubuntu with Unity desktop environment for deep learning task using TensorFlow and OpenCV 3. 
 
@@ -114,9 +114,7 @@ python3
 
 ## Other options
 
-
-
-####Ngrok
+#### Ngrok
 
 [Ngrok](https://ngrok.com/) can be used to deploy local host to the Internet.
 
