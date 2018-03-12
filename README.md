@@ -1,6 +1,4 @@
-[TOC]
-
-# Nvidia-docker-Ubuntu 16.04-Unity-Desktop-TensorFlow with GPU
+#Nvidia-docker-Ubuntu 16.04-Unity-Desktop-TensorFlow with GPU
 
 Dockerfile for Ubuntu with Unity desktop environment for deep learning task using TensorFlow and OpenCV 3. 
 
@@ -58,17 +56,17 @@ sudo nvidia-docker run -itd -p 16068:6080 -e PASSWORD=0000 -e SUDO=yes leeochang
 
 Wait for a few seconds, you can access http://[your ip address]:16068/vnc.html and see this noVNC login screen:
 
-![alt text](1.png)
+![alt text](./pic/1.png)
 
 Then click the "Connect" button and input you noVNC password "0000", then you get the system login page.  If you want the system with adaptive resolution, select "Remote Resizing" option in the control bar on the left side of your browser.
 
-![](2.png)
+![](pic/2.png)
 
 
 
 Input your system login password("0000" if you follow this guide). Then you can log into the system.
 
-![](3.png)
+![](pic/3.png)
 
 > If you don't set "-e PASSWORD=$your_password" option,  the password will create randomly, to find it, please use the following command:
 >
@@ -82,7 +80,7 @@ Input your system login password("0000" if you follow this guide). Then you can 
 
 For gnome terminal doesn't work, we install guake for you. First search guake and click to start it. Then use "F12" to show or hide the terminal.
 
-![](4.png)
+![](pic/4.png)
 
 
 
@@ -112,9 +110,11 @@ python3
 
 
 
-![](5.png)
+![](pic/5.png)
 
 ## Other options
+
+
 
 ####Ngrok
 
@@ -164,3 +164,24 @@ Use [MobaXterm](https://mobaxterm.mobatek.net/) for windows user.
 ## Issues
 
 Some components of Unity may not work properly with vncserver.
+
+## Fix the crash problem of Firefox Browser
+
+Sometimes you meet tab crash problem with Firefox:
+
+![](pic/6.png)
+
+To fix that, you need to input "about:preferences" in the address bar and press enter, and cancel the tick of the following options:
+
+![](pic/7.png)
+
+And input "about:config" in the address bar, double click to modify the following options:
+
+- browser.tabs.remote.autostart = false
+- browser.tabs.remote.autostart.2 = false (Optional)
+- webgl.disable-wgl = true
+- webgl.disabled = true
+- webgl.enable-webgl2 = false
+
+Finally, restart Firefox, hope solve the crash problem!
+
