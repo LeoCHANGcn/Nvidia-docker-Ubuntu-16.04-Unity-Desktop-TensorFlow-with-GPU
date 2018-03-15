@@ -20,7 +20,7 @@ This **Dockerfile** aims to create a container for **Deep Learning with Tensorfl
 
 
 
-##How to build?
+## How to build?
 
 First, your computer should have at least one Nvidia video card with compute capability greater than or equal to 3.5 and installed proper driver (higher than 384.81 version) for it. 
 
@@ -84,7 +84,7 @@ For gnome terminal doesn't work, we install guake for you. First search guake an
 
 
 
-##Password Changing
+## Password Changing
 
 You can change your system login password by using:
 
